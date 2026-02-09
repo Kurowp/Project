@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="./scriptexp.js"></script>
+    <script src="./wallexp1.js"></script>
+    <script src="./wallexp2.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sphere position="0 10 0" side="double" radius="300" color="black"></a-sphere>
+        <a-plane position="0 0 0" rotation="-90 0 0" width="1000" height="1000" color="black"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+        <a-camera wasd-controls="acceleration: 500; fly:true" position="50 50 50">
+        <a-cursor raycaster="objects: [clickable]"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
