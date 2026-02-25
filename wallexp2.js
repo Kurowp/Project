@@ -12,15 +12,15 @@ this.container = document.createElement('a-entity');
         var types = ['sphere','box','dodecahedron','torus'];
 
         var pieces = 2 + Math.floor(Math.random() * 4);
-        var layerCount = 3; // number of stacked layers per position
-        var layerSpacing = 3; // vertical spacing to keep shapes connected
+        var layerCount = 3; 
+        var layerSpacing = 3; 
         for (let i = 0; i < pieces; i++) {
-            // base horizontal position for this piece
+
             var px = (Math.random() - 0.5) * 5;
             var basePy = 8 + Math.random() * 16;
             var pz = (Math.random() - 0.5) * 5;
 
-            // create `layerCount` random shapes stacked vertically at the same x/z
+          
             for (let layer = 0; layer < layerCount; layer++) {
                 var t = types[Math.floor(Math.random() * types.length)];
                 var el = document.createElement('a-' + t);
@@ -28,7 +28,7 @@ this.container = document.createElement('a-entity');
                 var py = basePy + layer * layerSpacing;
                 el.setAttribute('position', { x: px, y: py, z: pz });
 
-                var scale = 1 + Math.random() * 3; // keep size ranges as before
+                var scale = 1 + Math.random() * 3; 
                 el.setAttribute('color', colors[Math.floor(Math.random() * colors.length)]);
                 el.setAttribute('shadow', 'receive:true');
 
