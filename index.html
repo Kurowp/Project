@@ -4,10 +4,15 @@
           </head>
           <body>
             <a-scene>
-              <a-assets>
-                <img id="dune" src="hard-rough-top-of-sandstone-wall-texture-background-outdoor-sandstone-texture-photo.jpg"/>
+              <!-- <a-assets>
+   
+              <a-asset-item id="scene-obj" src="newscene/newscene.obj"></a-asset-item>
+              <a-asset-item id="scene-mtl" src="newscene/newscene.mtl"></a-asset-item>
+
               </a-assets>     
-              <a-entity id="shapes" position="100 0 0">
+               <a-obj-model scale=".1 .1 .1" src="#scene-obj" mtl="#scene-mtl"></a-obj-model> -->
+            
+              <!-- <a-entity id="shapes" position="100 0 0">
               <a-icosahedron position="-25 5 0" color="#FF926B" radius="5"></a-icosahedron>
                 <a-dodecahedron position="-15 5 0" color="#FF926B" radius="5"></a-dodecahedron>
                 <a-octahedron position="-35 5 0"color="#FF926B" radius="5"></a-octahedron>
@@ -16,27 +21,15 @@
                 <a-torus-knot position="-25 25 0"color="#B84A39" arc="180" p="2" q="7" radius="5" radius-tubular="0.1"></a-torus-knot>
                 <a-torus position="-25 30 0"color="#43A367" arc="270" radius="5" radius-tubular="0.1"></a-torus>
                 <a-cone position="-25 10 0" color="tomato" radius-bottom="2" radius-top="0.5"></a-cone>
-              </a-entity>
-      
-              <a-entity id="spawn">
-                <a-box position="26 3 0" rotation="0 0 90"depth="30" height="30" width=".5"></a-box> floor
-                <a-box position="26 13 0" rotation="0 0 90"depth="30" height="30" width=".5"></a-box> ceiling
-                <a-box position="26 8 14.5" rotation="0 0 0" depth="1" height="10" width="30" ></a-box> wall
-                <a-box position="26 8 -14.5" rotation="0 0 0" depth="1" height="10" width="30" ></a-box> wall
-                <a-box position="40.5 8 0" rotation="0 90 0" depth="1" height="10" width="30" ></a-box> wall
-                <a-box position="11.5 8 0" rotation="0 90 0" depth="1" height="10" width="30" ></a-box> wall
+              </a-entity> -->
+    
 
-                <a-text value="Welcome To Dunes" position="21 11 -13.9" color="black" side="double" height="30" width="30"> </a-text>
-                <a-text value="Controls" position="21 8 -13.9" color="black" side="double" height="20" width="20"> </a-text>
-
-              </a-entity>
-
-              <a-entity id="snake" scale="4 4 4" position="30 225 -250">
-                <a-box position="0 2.5 0" rotation="0 0 45" width="7" height="7" depth="7" color="green"></a-box> head
-                <a-box position="0 2.5 -2" rotation="0 90 45" width="7" height="7" depth="7" color="green"></a-box>
-                <a-box position="0 2.5 -2.5" rotation="45 45 45" width="7" height="7" depth="7" color="green"></a-box>head 
-                <a-box position="0 0 -5" rotation="0 90 45" width="7" height="1" depth="7" color="green"></a-box>neck
-                <a-box position="0 -3 -6" rotation="45 45 45" width="7" height="7" depth="7" color="green"></a-box>neck         
+              <!-- <a-entity id="snake" scale="4 4 4" position="30 225 -250">
+                <a-box position="0 2.5 0" rotation="0 0 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> head
+                <a-box position="0 2.5 -2" rotation="0 90 45" width="7" height="7" depth="7" color="#D2B48C"></a-box>
+                <a-box position="0 2.5 -2.5" rotation="45 45 45" width="7" height="7" depth="7" color="#D2B48C"></a-box>head 
+                <a-box position="0 0 -5" rotation="0 90 45" width="7" height="1" depth="7" color="#D2B48C"></a-box>neck
+                <a-box position="0 -3 -6" rotation="45 45 45" width="7" height="7" depth="7" color="#D2B48C"></a-box>neck         
 
                 <a-entity id="wing">
                 <a-cylinder position="-4 -6 20" rotation="0 135 0" height="6" radius="0.2" color="white"></a-cylinder> left wing bone 1
@@ -45,34 +38,34 @@
                 <a-cylinder position="-2.5 -3 19.5" rotation="0 0 45" height="3" radius="0.1" color="white"></a-cylinder> left wing wing segment 1
                 <a-octahedron position="-3.5 -4.5 19.5" rotation="90 0 90" height="8" scale=" .1 .1 2" radius=".8" color="red"></a-octahedron> left wing spike
                 </a-entity>
-                <a-box position="0 -6 -8" rotation="45 45 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="1 -9 -10" rotation="45 60 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="3 -12 -12" rotation="45 90 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="5 -15 -14" rotation="45 120 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="7 -18 -16" rotation="45 150 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="9 -21 -18" rotation="45 180 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="11 -24 -20" rotation="45 210 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="13 -27 -22" rotation="45 240 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="15 -30 -24" rotation="45 270 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="17 -33 -26" rotation="45 300 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="18 -36 -27" rotation="45 330 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="18 -39 -26" rotation="45 360 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="17 -42 -24" rotation="45 390 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="15 -45 -20" rotation="45 420 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="12 -47 -15" rotation="45 450 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="8 -48 -10" rotation="45 480 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="3 -48 -5" rotation="45 510 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="-2 -46 0" rotation="45 540 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="-6 -42 3" rotation="45 570 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="-9 -37 4" rotation="45 600 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="-10 -31 3" rotation="45 630 45" width="7" height="7" depth="7" color="green"></a-box> body
-                <a-box position="-9 -25 1" rotation="45 660 45" width="7" height="7" depth="7" color="green"></a-box> body tail
+                <a-box position="0 -6 -8" rotation="45 45 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="1 -9 -10" rotation="45 60 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="3 -12 -12" rotation="45 90 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="5 -15 -14" rotation="45 120 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="7 -18 -16" rotation="45 150 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="9 -21 -18" rotation="45 180 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="11 -24 -20" rotation="45 210 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="13 -27 -22" rotation="45 240 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="15 -30 -24" rotation="45 270 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="17 -33 -26" rotation="45 300 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="18 -36 -27" rotation="45 330 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="18 -39 -26" rotation="45 360 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="17 -42 -24" rotation="45 390 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="15 -45 -20" rotation="45 420 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="12 -47 -15" rotation="45 450 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="8 -48 -10" rotation="45 480 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="3 -48 -5" rotation="45 510 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-2 -46 0" rotation="45 540 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-6 -42 3" rotation="45 570 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-9 -37 4" rotation="45 600 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-10 -31 3" rotation="45 630 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-9 -25 1" rotation="45 660 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body tail
 
                 <a-octahedron position="-2 0 0" rotation="90 0 90" height="8" scale=" .2 1 5" radius=".8" color="red"></a-octahedron> teeth
                 <a-octahedron position="2 0 0" rotation="90 0 90" height="20" scale=" .2 1 5" radius=".8" color="red"></a-octahedron> teeth
-              </a-entity>
+              </a-entity> -->
 
-              <a-entity id="Mountains" scale="10 10 10" position="-200 0 0">
+              <a-entity id="Mountains" scale="10 10 10" position="-200 -30 0">  hangover
                 <a-box  position="0 5 0"rotation="75 0 0" width="2.5" depth="7" height="5" color="#D2B48C"> </a-box> main body left
                 <a-box  position="2 8 0" rotation="-65 90 125" width="3.5" depth="1" height="5" color="#D2B48C"> </a-box> top 
                 <a-box  position="5 5 0" rotation="0 35 0" repeat="5 5" width="2" depth="2" height="4" color="#D2B48C"> </a-box> main body right
@@ -93,7 +86,7 @@
               </a-entity>
 
               
-            <a-entity id="mountain range1" position="300 0 300" rotation="0 -240 0">   
+            <a-entity id="mountain range2" position="0 0 300" rotation="0 60 0">   
               <a-entity id="Mountains2" scale="8 8 8" position="300 0 100">
                 <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
                 <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
@@ -146,14 +139,275 @@
 
               </a-entity>
 
+              <a-entity id="mountain range1" position="300 0 300" rotation="0 -240 0">   
+              <a-entity id="Mountains2" scale="8 8 8" position="300 0 100">
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
 
 
 
+              </a-entity>
+
+              <a-entity id="Mountains2.1" scale="8 8 8" rotation="0 30 0" position="400 0 100">
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+          </a-entity> 
+
+
+            </a-entity>
+
+              <a-entity id="mountain range3" position="-100 0 300" rotation="0 60 0">   
+              <a-entity id="Mountains2" scale="8 8 8" position="300 0 100">
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
 
 
 
+            </a-entity>
 
-              <a-entity id="Mountains3" scale="7 7 7" position="299 30 -150">
+              <a-entity id="Mountainsmid.1" scale="8 8 8" rotation="0 30 0" position="400 0 -20"> middle piece
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+          </a-entity> 
+
+           <a-entity id="Mountainsmid.2" scale="8 8 8" rotation="0 10 0" position="300 0 -20"> 
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+          </a-entity> 
+
+          
+           <a-entity id="Mountainsmid.3" scale="8 8 8" rotation="0 40 0" position="200 0 -20"> 
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+          </a-entity> 
+
+           <a-entity id="Mountains2.4" scale="8 8 8" rotation="0 30 0" position="420 0 -140"> 
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+          </a-entity> 
+
+           <a-entity id="Mountains2.3" scale="8 8 8" rotation="0 -70 0" position="540 0 -20"> 
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+          </a-entity> 
+
+           <a-entity id="Mountains2.2" scale="8 8 8" rotation="0 -40 0" position="480 0 -60">
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+          </a-entity> 
+
+          <a-entity id="Mountains2.5" scale="8 8 8" rotation="0 -40 0" position="560 0 -100">
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+          </a-entity> 
+
+           <a-entity id="Mountains2.6" scale="8 8 8" rotation="0 40 0" position="500 0 -190"> 
+                <a-box  position="2 8.5 1.5" rotation="0 15 45" repeat="5 5" width=".5" depth=".5" height=".5" color="#D2B48C"> </a-box>
+                <a-box position="0 4 0" rotation="0 30 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -40 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -30 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -35 0" width="5" depth="5" height="5" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -90 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -80 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -70 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -75 0" width="5" depth="5" height="3" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 35 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 40 0" width="5" depth="5" height="4" color="#D2B48C"></a-box> main body top right 2
+                <a-dodecahedron position="0 9.65 0" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>rightest
+                <a-dodecahedron position="0 9.7 -2" rotation="0 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-3.5 9.25 -4" rotation="30 130 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-7.5 8.25 -5" rotation="30 0 40" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-dodecahedron position="-9 7.25 -4.25" rotation="30 0 100" color="#D2B48C" radius="2.5"></a-dodecahedron>
+                <a-box position="-2.5 3.5 0" rotation="0 35 0" width="2.5" depth="2.5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 135 45" width="1" depth="1" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -45 45" width="1" depth=".5" height="1.75" color="#D2B48C"></a-box> main body middle bottom
+          </a-entity> 
+
+
+           </a-entity>
+           
+              <a-entity id="Mountains3" scale="7 7 7" position="299 0 -150">
                 <a-box position="0 4 0" rotation="0 40 0" width="6" depth="6" height="5" color="#D2B48C"></a-box> main body right
                 <a-box position="-3 3.5 -3" rotation="0 -30 0" width="6" depth="6" height="4" color="#D2B48C"></a-box> main body left                
                 <a-box position="-3 6.5 -3" rotation="0 -20 0" width="6" depth="6" height="6" color="#D2B48C"></a-box> main body left top
@@ -174,9 +428,36 @@
                 <a-box position="-2.5 3.5 0" rotation="0 45 0" width="3" depth="3" height="2" color="#D2B48C"></a-box> main body middle bottom
                 <a-box position="-4.2 3.5 -1" rotation="0 145 45" width="1.5" depth="1.5" height="2" color="#D2B48C"></a-box> main body middle bottom
                 <a-box position="-2 3.5 1.6" rotation="0 -35 45" width="1.5" depth="1" height="2" color="#D2B48C"></a-box> main body middle bottom
-              </a-entity>
+            </a-entity>
 
-              <a-entity id="mountain4" position="0 30 200" >
+            <a-entity id="Mountains3.1" scale="7 7 7" position="350 0 -180">
+                <a-box position="0 4 0" rotation="0 40 0" width="6" depth="6" height="5" color="#D2B48C"></a-box> main body right
+                <a-box position="-3 3.5 -3" rotation="0 -30 0" width="6" depth="6" height="4" color="#D2B48C"></a-box> main body left                
+                <a-box position="-3 6.5 -3" rotation="0 -20 0" width="6" depth="6" height="6" color="#D2B48C"></a-box> main body left top
+                <a-box position="-3 8.5 -3" rotation="0 -25 0" width="6" depth="6" height="6" color="#D2B48C"></a-box> main body left top  2
+                <a-box position="-8 3.5 -4.5" rotation="0 -80 0" width="6" depth="6" height="4" color="#D2B48C"></a-box> main body left left 
+                <a-box position="-8 6.5 -4.5" rotation="0 -70 0" width="6" depth="6" height="4" color="#D2B48C"></a-box> main body left left top
+                <a-box position="-8 8.5 -4.5" rotation="0 -60 0" width="6" depth="6" height="4" color="#D2B48C"></a-box> main body left left top top   
+                <a-box position="-5 3.5 -4.5" rotation="0 -65 0" width="6" depth="6" height="4" color="#D2B48C"></a-box> main body left left middle               
+            
+                <a-box position="0 8 0" rotation="0 45 0" width="6" depth="6" height="5" color="#D2B48C"></a-box> main body top right
+                <a-box position="0 9 0" rotation="0 50 0" width="6" depth="6" height="5" color="#D2B48C"></a-box> main body top right 2
+                <a-octahedron position="0 9.65 0" rotation="0 0 40"  radius="3" color="#D2B48C"></a-octahedron>rightest
+                <a-octahedron position="0 9.7 -2" rotation="0 0 40"  radius="3" color="#D2B48C"></a-octahedron>
+                <a-octahedron position="-3.5 9.25 -4" rotation="30 130 40"  radius="3" color="#D2B48C"></a-octahedron>
+                <a-octahedron position="-7.5 8.25 -5" rotation="30 0 40"  radius="3" color="#D2B48C"></a-octahedron>
+                <a-octahedron position="-9 7.25 -4.25" rotation="30 0 100"  radius="3" color="#D2B48C"></a-octahedron>
+
+                <a-box position="-2.5 3.5 0" rotation="0 45 0" width="3" depth="3" height="2" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-4.2 3.5 -1" rotation="0 145 45" width="1.5" depth="1.5" height="2" color="#D2B48C"></a-box> main body middle bottom
+                <a-box position="-2 3.5 1.6" rotation="0 -35 45" width="1.5" depth="1" height="2" color="#D2B48C"></a-box> main body middle bottom
+            </a-entity>
+
+
+
+             
+            
+            <!-- <a-entity id="mountain4" position="0 30 200" > 
                 <a-box height="40" width="25" depth="40" color="#D2B48C"></a-box> layer 1
                 <a-box position="12 0 0" rotation="0 30 0"height="40" width="25" depth="40" color="#D2B48C"></a-box> 
                 <a-box position="6 0 40" rotation="0 90 0"height="40" width="25" depth="80" color="#D2B48C"></a-box> 
@@ -245,11 +526,11 @@
 
 
 
-              </a-entity>
+              </a-entity> -->
 
               <a-box> </a-box>
 
-              <a-entity id="shack" scale="7 7 7"position="-5 0 0">
+              <!-- <a-entity id="shack" scale="3 2 3"position="-5 0 0">
                 <a-entity id="shack-floor" position="0 .1 0">
                   <a-box position="0 0 0" width="20" height=".2" depth="10" color="#5a3b22"></a-box>
                   <a-box position="0 .12 -4.0" width="19.5" height=".06" depth=".3" color="#6b4f2d"></a-box>
@@ -284,15 +565,17 @@
                   <a-box position="0 1.45 -3.2" width="22" height=".15" depth="6.6" rotation="-12 0 0" color="#6b4f2d"></a-box>
                   <a-box position="0 1.05 0" width="20.5" height=".3" depth="10.5" rotation="0 0 0" color="#6b4f2d"></a-box>
                 </a-entity>
+                  <a-text value="Welcome To Dunes" position="-5 5 -13.9" color="black" side="double" height="30" width="30"> </a-text>
+                  <a-text value="Rules" rotation="0 90 0" position="-9.7 5 3" color="black" side="double" height="15" width="15"> </a-text>
 
+                <a-text value="Controls" position="-5 8 -13.9" color="black" side="double" height="20" width="20"> </a-text>
               </a-entity>
-      
-      
-
+       -->
+    
 
               <a-plane position="0 0 0" rotation="-90 0 0" width="1000" height="1000" color="#7BC8A4" src="#grass2"></a-plane>
               <a-sky color="#ECECEC"></a-sky>
-                <a-camera wasd-controls="acceleration: 500; fly:true" position="50 50 50">
+                <a-camera wasd-controls="acceleration: 500; fly:true" position="50 300 50">
                 <a-cursor raycaster="objects: [clickable]"></a-cursor>
               </a-camera>
             </a-scene>

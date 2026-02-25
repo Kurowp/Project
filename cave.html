@@ -7,6 +7,15 @@
   </head>
   <body>
     <a-scene>
+      <a-assets>
+   
+              <a-asset-item id="scene-obj" src="newscene/newscene.obj"></a-asset-item>
+              <a-asset-item id="scene-mtl" src="newscene/newscene.mtl"></a-asset-item>
+
+              </a-assets>     
+               <a-obj-model scale=".1 .1 .1" src="#scene-obj" mtl="#scene-mtl"></a-obj-model>
+
+               
          <a-entity id="cave">
             <a-box height="100"></a-box>
             <a-sphere position="0 15 0" radius="300" segments-height="40" segments-width="30" color="#888888" side="back"></a-sphere>
