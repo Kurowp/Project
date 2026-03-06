@@ -41,7 +41,7 @@ function checkPortalDistance(){
 
   if(dist <= 50){
     console.log("within portal, redirecting");
-    window.location.href = "caveexp.html";
+    window.location.href = "index.html";
   }
 
 }

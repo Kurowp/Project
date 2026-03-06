@@ -37,10 +37,41 @@ let maze = [
 ];
 
 let scene;
+let canLeave = false;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
-  console.log(scene)
+  console.log(scene);
+  
+  const button = document.getElementById("button");
+  if(button) {
+    button.addEventListener("click", function() {
+      canLeave = true;
+      console.log("canLeave set to true");
+      button.setAttribute('color', 'green');
+    });
+  }
+
+  const cameraEl = document.querySelector('a-camera');
+  const portalEl = document.querySelector('a-gltf-model[src="#portal"]');
+  function checkPortalDistance() {
+    
+    if(!cameraEl || !portalEl) return;
+    if(!canLeave) return;
+    const camPos = new THREE.Vector3();
+    const portalPos = new THREE.Vector3();
+    cameraEl.object3D.getWorldPosition(camPos);
+    portalEl.object3D.getWorldPosition(portalPos);
+    const dist = camPos.distanceTo(portalPos);
+    console.log("distance:", dist);
+    if(dist <= 10) {
+      console.log('within portal, redirecting');
+      window.location.href = 'boss.html';
+    }
+  }
+
+  setInterval(checkPortalDistance, 200);
+
   for(let r = 0; r < maze.length; r++){
     let row = maze[r];
     let cols = row.split("");

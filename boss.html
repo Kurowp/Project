@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="../../dist/aframe-particle-system-component.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.5.x/dist/aframe-environment-component.min.js"></script>
+
+
+
+
+  </head>
+  <body>
+        <a-scene>
+        <a-entity environment="preset: contact;"  scale="1 4 1"></a-entity>   
+        <a-entity environment="preset: threetowers;" position="0 100 0" scale="1 4 1"></a-entity>    
+ 
+  
+        <!-- <a-sphere position="0 -30 0" side="double" radius="300" color="grey"></a-sphere> -->
+        <a-plane position="0 -5 0" rotation="-90 0 0" width="1000" height="1000" color="black"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+        <a-camera wasd-controls="acceleration: 500; fly:true" look-controls="pointerLockEnabled: true" position="50 50 50">
+        <a-cursor raycaster="objects: [clickable]"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>

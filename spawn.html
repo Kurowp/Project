@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="spawn.js"></script>
+
+
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+              <!-- <a-asset-item id="scene-obj" src="newscene/newscene.obj"></a-asset-item>
+              <a-asset-item id="scene-mtl" src="newscene/newscene.mtl"></a-asset-item> -->
+          <a-asset-item id="portal" src="portal_gate_sci-fi/scene.gltf"></a-asset-item>
+
+      </a-assets>    
+                    <a-entity id="shack" scale="3 2 3"position="-5 0 0">
+                <a-entity id="shack-floor" position="0 .1 0">
+                  <a-box position="0 0 0" width="20" height=".2" depth="10" color="#5a3b22"></a-box>
+                  <a-box position="0 .12 -4.0" width="19.5" height=".06" depth=".3" color="#6b4f2d"></a-box>
+                  <a-box position="0 .12 -3.0" width="19.5" height=".06" depth=".3" color="#6b4f2d"></a-box>
+                  <a-box position="0 .12 -2.0" width="19.5" height=".06" depth=".3" color="#6b4f2d"></a-box>
+                  <a-box position="0 .12 -1.0" width="19.5" height=".06" depth=".3" color="#6b4f2d"></a-box>
+                  <a-box position="0 .12 0.0" width="19.5" height=".06" depth=".3" color="#6b4f2d"></a-box>
+                  <a-box position="0 .12 1.0" width="19.5" height=".06" depth=".3" color="#6b4f2d"></a-box>
+                </a-entity>
+                <a-entity id="shack-walls" position="0 4 0">
+                  <a-box position="-8 0 -5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="-5 0 -5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="-2 0 -5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="2 0 -5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="5 0 -5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="8 0 -5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="-8 0 5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="-5 0 5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="-2 0 5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="1 0 5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="4 0 5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="7 0 5" width=".5" height="9" depth="1" color="#7a4f2b"></a-box>
+                  <a-box position="0 4.6 0" width="20" height=".2" depth="10" color="#6b4f2d"></a-box>
+                </a-entity>
+                <a-entity id="side-walls" position="0 4 0">
+                  <a-box position="-10 0 0" width=".5" height="9" depth="10" color="#7a4f2b"></a-box>
+                  <a-box position="10 0 0" width=".5" height="9" depth="10" color="#7a4f2b"></a-box>
+                </a-entity>
+
+                <a-entity id="roof" position="0 8 0">
+                  <a-box position="0 1.45 3.2" width="22" height=".22" depth="6.6" rotation="12 0 0" color="#6b4f2d"></a-box>
+                  <a-box position="0 1.45 -3.2" width="22" height=".15" depth="6.6" rotation="-12 0 0" color="#6b4f2d"></a-box>
+                  <a-box position="0 1.05 0" width="20.5" height=".3" depth="10.5" rotation="0 0 0" color="#6b4f2d"></a-box>
+                </a-entity>
+                  <a-text value="Welcome To Dunes" position="-5 5 -13.9" color="black" side="double" height="30" width="30"> </a-text>
+                  <a-text value="Rules" rotation="0 90 0" position="-9.7 5 3" color="black" side="double" height="15" width="15"> </a-text>
+
+                <a-text value="Controls" position="-5 8 -13.9" color="black" side="double" height="20" width="20"> </a-text>
+              </a-entity>
+                            <a-icosahedron position="-25 5 0" color="#FF926B" radius="5"></a-icosahedron>
+                <a-dodecahedron position="-15 5 0" color="#FF926B" radius="5"></a-dodecahedron>
+                <a-octahedron position="-35 5 0"color="#FF926B" radius="5"></a-octahedron>
+                <a-ring position="-25 20 0"color="teal" radius-inner="1" radius-outer="2"></a-ring>
+                <a-triangle position="-30 20 0"color="#CCC" height="10"vertex-c="1 -1 0"></a-triangle>
+                <a-torus-knot position="-25 25 0"color="#B84A39" arc="180" p="2" q="7" radius="5" radius-tubular="0.1"></a-torus-knot>
+                <a-torus position="-25 30 0"color="#43A367" arc="270" radius="5" radius-tubular="0.1"></a-torus>
+                <a-cone position="-25 10 0" color="tomato" radius-bottom="2" radius-top="0.5"></a-cone>
+              </a-entity> -->
+    
+
+              <a-entity id="snake" scale="4 4 4" position="30 225 -250">
+                <a-box position="0 2.5 0" rotation="0 0 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> head
+                <a-box position="0 2.5 -2" rotation="0 90 45" width="7" height="7" depth="7" color="#D2B48C"></a-box>
+                <a-box position="0 2.5 -2.5" rotation="45 45 45" width="7" height="7" depth="7" color="#D2B48C"></a-box>head 
+                <a-box position="0 0 -5" rotation="0 90 45" width="7" height="1" depth="7" color="#D2B48C"></a-box>neck
+                <a-box position="0 -3 -6" rotation="45 45 45" width="7" height="7" depth="7" color="#D2B48C"></a-box>neck         
+
+                <a-entity id="wing">
+                <a-cylinder position="-4 -6 20" rotation="0 135 0" height="6" radius="0.2" color="white"></a-cylinder> left wing bone 1
+                <a-cylinder position="-3.75 -3.25 20" rotation="15 135 15" height="4" radius="0.15" color="white"></a-cylinder> left wing bone 2
+                <a-cylinder position="-2.25 -1 20" rotation="0 0 115" height="4" radius="0.15" color="white"></a-cylinder> left wing bone 3
+                <a-cylinder position="-2.5 -3 19.5" rotation="0 0 45" height="3" radius="0.1" color="white"></a-cylinder> left wing wing segment 1
+                <a-octahedron position="-3.5 -4.5 19.5" rotation="90 0 90" height="8" scale=" .1 .1 2" radius=".8" color="red"></a-octahedron> left wing spike
+                </a-entity>
+                <a-box position="0 -6 -8" rotation="45 45 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="1 -9 -10" rotation="45 60 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="3 -12 -12" rotation="45 90 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="5 -15 -14" rotation="45 120 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="7 -18 -16" rotation="45 150 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="9 -21 -18" rotation="45 180 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="11 -24 -20" rotation="45 210 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="13 -27 -22" rotation="45 240 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="15 -30 -24" rotation="45 270 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="17 -33 -26" rotation="45 300 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="18 -36 -27" rotation="45 330 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="18 -39 -26" rotation="45 360 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="17 -42 -24" rotation="45 390 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="15 -45 -20" rotation="45 420 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="12 -47 -15" rotation="45 450 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="8 -48 -10" rotation="45 480 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="3 -48 -5" rotation="45 510 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-2 -46 0" rotation="45 540 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-6 -42 3" rotation="45 570 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-9 -37 4" rotation="45 600 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-10 -31 3" rotation="45 630 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body
+                <a-box position="-9 -25 1" rotation="45 660 45" width="7" height="7" depth="7" color="#D2B48C"></a-box> body tail
+
+                <a-octahedron position="-2 0 0" rotation="90 0 90" height="8" scale=" .2 1 5" radius=".8" color="red"></a-octahedron> teeth
+                <a-octahedron position="2 0 0" rotation="90 0 90" height="20" scale=" .2 1 5" radius=".8" color="red"></a-octahedron> teeth
+              </a-entity>
+      
+            <a-gltf-model id="portalModel" src="#portal" position="30 0 120" rotation="0 180 0" scale="10 10 10"></a-gltf-model>              <!-- <a-entity id="shapes" position="100 0 0">
+        <a-box position="0 0 0" depth="1000" height="1000" width="1000" rotation="0 0 0" color="#C3C3C3" src="#wall"></a-box>
+            <!-- <a-obj-model scale=".1 .1 .1" src="#scene-obj" mtl="#scene-mtl"></a-obj-model> -->
+              
+            
+
+       
+       
+       
+        <a-box position="0 0 0" depth="1000" height="1000" width="1000" rotation="0 0 0" color="#C3C3C3" src="#wall"></a-box>
+
+
+
+
+
+
+
+
+
+
+         <a-plane position="0 0 0" rotation="-90 0 0" width="1000" height="1000" color="#7BC8A4" src="#grass2"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+        <a-camera wasd-controls="acceleration: 500; fly:true" position="50 50 50">
+        <a-cursor raycaster="objects: [clickable]"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>

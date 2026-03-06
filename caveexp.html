@@ -1,18 +1,41 @@
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-    <script src="./scriptexp.js"></script>
-    <script src="./wallexp1.js"></script>
-    <script src="./wallexp2.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-sphere position="0 -30 0" side="double" radius="300" color="grey"></a-sphere>
-        <a-plane position="0 0 0" rotation="-90 0 0" width="1000" height="1000" color="black"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-        <a-camera wasd-controls="acceleration: 500; fly:true" position="50 50 50">
-        <a-cursor raycaster="objects: [clickable]"></a-cursor>
-      </a-camera>
-    </a-scene>
-  </body>
+<head>
+<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+<script src="./scriptexp.js"></script>
+<script src="./wallexp1.js"></script>
+<script src="./wallexp2.js"></script>
+<script src="https://unpkg.com/aframe-environment-component@1.5.x/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+
+<a-scene>
+
+<a-assets>
+  <a-asset-item id="portal" src="portal_gate_sci-fi/scene.gltf"></a-asset-item>
+</a-assets>
+
+<a-gltf-model 
+  id="portalModel"
+  src="#portal"
+  position="15 25 -250"
+  rotation="0 180 0"
+  scale="10 10 10">
+</a-gltf-model>
+
+<a-entity environment="preset: goldmine;" scale="7 4 7"></a-entity>
+
+<a-box id="button" class="clickable" color="red" position="0 20 -118"></a-box>
+
+<a-plane position="0 -5 0" rotation="-90 0 0" width="1000" height="1000" color="black"></a-plane>
+
+<a-sky color="#ECECEC"></a-sky>
+
+<a-camera wasd-controls="acceleration: 500; fly:true" look-controls="pointerLockEnabled: true" position="50 50 50">
+  <a-cursor raycaster="objects: .clickable"></a-cursor>
+</a-camera>
+
+</a-scene>
+
+</body>
 </html>
