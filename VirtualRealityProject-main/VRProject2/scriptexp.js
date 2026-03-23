@@ -36,7 +36,7 @@ let maze = [
 
 ];
 
-let scene;
+
 let canLeave = false;
 
 window.addEventListener("DOMContentLoaded",function() {
@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded",function() {
     });
   }
 
-  const cameraEl = document.querySelector('a-camera');
+  const cameraEl = document.getElementById('mainCamera');
   const portalEl = document.querySelector('a-gltf-model[src="#portal"]');
   function checkPortalDistance() {
     
